@@ -1,0 +1,260 @@
+.agitation {
+  margin-top: 5rem;
+
+  @media (width < 576px) {
+    margin-top: 3rem;
+  }
+}
+
+.agitation-head {
+  position: relative;
+
+  &__headline {
+    max-width: 47.75rem;
+
+    @media (width < 1180px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1.5rem;
+      max-width: unset;
+    }
+  }
+
+  &__text {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 135%;
+    text-transform: uppercase;
+    font-feature-settings:
+      'pnum' on,
+      'lnum' on;
+    color: var(--brown_2);
+
+    @media (width < 1180px) {
+      text-align: center;
+    }
+
+    @media (width < 576px) {
+      font-size: 1.75rem;
+      text-align: left;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24.625rem;
+    height: 15.625rem;
+    background: url('../img/chees-tournament.jpg') center center no-repeat;
+    background-size: cover;
+    clip-path: ellipse(50% 50%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/texture-bg.png');
+      mix-blend-mode: color-burn;
+      z-index: 1;
+    }
+
+    @media (width < 1180px) {
+      position: relative;
+      top: unset;
+      transform: unset;
+    }
+
+    @media (width < 576px) {
+      width: 21rem;
+      max-width: 100%;
+      height: 13.25rem;
+    }
+  }
+}
+
+.agitation-main {
+  margin-top: 5.75rem;
+  display: flex;
+  column-gap: 2.75rem;
+
+  &__img {
+    position: relative;
+    width: 500px;
+    height: 527px;
+
+    >div {
+      padding: 3rem 1.625rem 0;
+      position: absolute;
+      top: -4.75rem;
+      left: -5rem;
+      width: 609px;
+
+      >img {
+        width: 100%;
+        object-fit: cover;
+
+        @media (width < 1180px) {
+          height: 100%;
+        }
+      }
+
+      @media (width < 1180px) {
+        padding: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 375px;
+        height: 100%;
+      }
+    }
+
+    @media (width < 1180px) {
+      width: 100%;
+      height: 420px;
+    }
+  }
+
+  &__description {
+    flex: 7 1 0;
+
+    @media (width < 576px) {
+      row-gap: 2.75rem;
+    }
+  }
+
+  &__headline {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 135%;
+    text-transform: uppercase;
+    font-feature-settings:
+      'pnum' on,
+      'lnum' on;
+    color: var(--brown_2);
+
+    @media (width < 992px) {
+      text-align: center;
+    }
+
+    @media (width < 576px) {
+      font-size: 1.75rem;
+      text-align: left;
+    }
+  }
+
+  &__table {
+    margin-top: 3.75rem;
+
+    &-item {
+      display: flex;
+
+      &:not(:last-child) {
+        border-bottom: 2px solid var(--brown_4);
+      }
+
+      >span {
+        font-family: 'Golos Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 120%;
+        font-feature-settings:
+          'pnum' on,
+          'lnum' on;
+        color: var(--brown_2);
+        white-space: nowrap;
+
+        &:first-child {
+          padding: 1rem 1rem 1rem 0;
+          flex: 3 1 0;
+          min-width: 19.125rem;
+          border-right: 2px solid var(--brown_4);
+
+          @media (width < 992px) {
+            flex: 1 1 50%;
+            min-width: unset;
+          }
+
+          @media (width < 576px) {
+            padding: 0;
+            border-right: none;
+          }
+        }
+
+        &:last-child {
+          padding: 1rem 0 1rem 1rem;
+          flex: 4 1 0;
+          font-weight: 600;
+
+          @media (width < 992px) {
+            flex: 1 1 50%;
+          }
+
+          @media (width < 576px) {
+            padding: 0 0 1rem;
+          }
+        }
+
+        .old-price {
+          margin-right: 0.75rem;
+          text-decoration: line-through var(--primary-red);
+        }
+
+        @media (width < 992px) {
+          white-space: wrap;
+        }
+      }
+
+      @media (width < 576px) {
+        flex-direction: column;
+        row-gap: 0.75rem;
+      }
+
+      &:not(:last-child) {
+        @media (width < 576px) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    @media (width < 992px) {
+      margin-top: 2.75rem;
+    }
+
+  }
+
+  &__sign {
+    margin-top: 3rem;
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 120%;
+    font-feature-settings:
+      'pnum' on,
+      'lnum' on;
+    color: var(--primary-blue);
+
+    @media (width < 992px) {
+      margin-top: 2.5rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (width < 992px) {
+    margin-top: 1.25rem;
+    flex-direction: column;
+    row-gap: 1.25rem;
+  }
+}

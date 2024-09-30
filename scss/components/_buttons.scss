@@ -1,0 +1,102 @@
+.btn {
+  padding: 0 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4.5rem;
+  border-radius: 4.125rem;
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  font-feature-settings:
+    'pnum' on,
+    'lnum' on;
+  line-height: 130%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    color 0.3s;
+
+  &-primary {
+    background-color: var(--brown_1);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--primary-yellow);
+      color: var(--brown_1);
+    }
+
+    @media (width < 576px) {
+      padding: 0 2.5rem;
+      height: 3rem;
+    }
+  }
+
+  &-secondary {
+    border: 2px solid var(--brown_1);
+    background-color: transparent;
+    color: var(--brown_1);
+
+    &:hover {
+      background-color: var(--brown_1);
+      color: var(--white);
+    }
+
+    @media (width < 576px) {
+      padding: 0 2.5rem;
+      height: 3rem;
+    }
+  }
+
+  &-info {
+    padding: 0.75rem;
+    height: 2.25rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-blue);
+    border-radius: 3.875rem;
+    line-height: 120%;
+    color: var(--primary-blue);
+
+    &:hover {
+      background-color: var(--primary-blue);
+      color: var(--white);
+    }
+  }
+}
+
+.slider-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  background-color: var(--brown_2);
+  background-image: url('../img/icons/btn-arrow.svg');
+  background-position-y: center;
+  background-position-x: calc(50% + 2px);
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: none;
+  transition: background 0.3s;
+
+  &.prev {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: var(--primary-yellow);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: var(--brown_6);
+  }
+
+  @media (width < 768px) {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+}

@@ -1,0 +1,116 @@
+.members {
+  margin: 12.5rem 0 8.75rem;
+
+  &__headline {
+    margin-bottom: -3.25rem;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.375rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-feature-settings:
+      'pnum' on,
+      'lnum' on;
+    color: var(--brown_2);
+
+    @media (width < 768px) {
+      margin: 0;
+      font-size: 2.25rem;
+    }
+
+  }
+
+  .slider-multi {
+    padding-top: 7.25rem;
+    padding-bottom: 1px;
+
+    .controls {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10rem;
+
+      @media (width < 992px) {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin: 2.5rem auto 0;
+      }
+
+      @media (width < 768px) {
+        width: 8.5rem;
+      }
+    }
+
+    @media (width < 768px) {
+      padding: 0;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &-slide {
+
+    &__img {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 20rem;
+        aspect-ratio: 1;
+
+        @media (width < 1180px) {
+          width: 15.25rem;
+        }
+      }
+
+      &-description {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.375rem;
+
+        span {
+          font-family: 'Golos Text';
+          font-style: normal;
+          line-height: 120%;
+          font-feature-settings:
+            'pnum' on,
+            'lnum' on;
+          color: var(--brown_2);
+          text-align: center;
+
+          &:first-child {
+            font-weight: 600;
+            font-size: 1.5rem;
+          }
+
+          &:last-child {
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 120%;
+            opacity: 0.6;
+          }
+        }
+      }
+
+
+    }
+
+    a {
+      margin: 1.25rem auto 0;
+      max-width: 7rem;
+    }
+  }
+
+  @media (width < 992px) {
+    margin-top: 7.5rem 0 6.25rem;
+  }
+
+  @media (width < 768px) {
+    margin: 7.5rem 0 6.25rem;
+  }
+}

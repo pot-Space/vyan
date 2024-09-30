@@ -1,0 +1,23 @@
+.footer {
+  background-color: var(--primary-beige);
+
+  &__text {
+    padding: 2.5rem 0 4.5rem;
+    max-height: 9.375rem;
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+    font-feature-settings:
+      'pnum' on,
+      'lnum' on;
+    color: var(--brown_2);
+    opacity: 0.6;
+
+    @media (width < 576px) {
+      padding: 2.5rem 0 3.75rem;
+      max-height: 13.375rem;
+    }
+  }
+}
